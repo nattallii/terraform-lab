@@ -10,7 +10,7 @@ output "vnet_id" {
 
 output "sa_blob_endpoint" {
   description = "The primary endpoint URL for blob storage"
-  value       = azurerm_storage_account.sa.primary_blob_endpoint
+  value       = azurerm_storage_account.storage.primary_blob_endpoint
 
 
 }

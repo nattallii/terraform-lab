@@ -34,7 +34,9 @@ resource "azurerm_virtual_network" "vnet" {
 }
 
 
-resource "azurerm_storage_account" "sa" {
+
+
+resource "azurerm_storage_account" "storage" {
   name                     = var.storage_account_name
   resource_group_name      = azurerm_resource_group.rg.name
   location                 = azurerm_resource_group.rg.location
@@ -42,7 +44,5 @@ resource "azurerm_storage_account" "sa" {
   account_replication_type = "LRS"
   tags = {
     Creator = var.creator_tag
-  }
-
+  } 
 }
-
