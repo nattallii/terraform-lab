@@ -80,3 +80,12 @@ variable "vm_password" {
   sensitive   = true
 }
 
+variable "ip_configuration_name" {
+  type        = string
+  description = "Network interface IP configuration name"
+}
+
+variable "private_ip_address_allocation" {
+  type        = string
+  description = "private ip address allocation"
+}

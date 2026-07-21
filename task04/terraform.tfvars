@@ -28,3 +28,7 @@ vm_image = "ubuntu-24_04-lts"
 
 vm_username = "vmazureuser"
 
+ip_configuration_name = "internal"
+
+private_ip_address_allocation = "Dynamic"
+
