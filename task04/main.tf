@@ -118,7 +118,7 @@ resource "azurerm_linux_virtual_machine" "vm" {
   name                            = var.vm_name
   location                        = azurerm_resource_group.rg.location
   resource_group_name             = azurerm_resource_group.rg.name
-  size = var.vm_size
+  size                            = var.vm_size
   disable_password_authentication = false
 
   admin_username = var.vm_username
@@ -141,17 +141,17 @@ resource "azurerm_linux_virtual_machine" "vm" {
     azurerm_network_interface.nic.id
   ]
 
-  
+
 
   provisioner "remote-exec" {
 
-  connection {
-    type     = "ssh"
-    host     = azurerm_public_ip.pip.ip_address
-    user     = var.vm_username
-    password = var.vm_password
+    connection {
+      type     = "ssh"
+      host     = azurerm_public_ip.pip.ip_address
+      user     = var.vm_username
+      password = var.vm_password
 
-  }
+    }
 
     inline = [
       "sudo apt-get update",
