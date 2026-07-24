@@ -1,23 +1,29 @@
 variable "name" {
-  type = string
+  description = "App service plan name"
+  type        = string
 }
 
 variable "location" {
-  type = string
+  description = "App service plan location"
+  type        = string
 }
 
 variable "resource_group_name" {
-  type = string
+  description = "Resource group name"
+  type        = string
 }
 
 variable "sku_name" {
-  type = string
+  description = "SKU name"
+  type        = string
 }
 
 variable "worker_count" {
-  type = number
+  description = "Count of worker instances"
+  type        = number
 }
 
 variable "tags" {
-  type = map(string)
+  description = "Creator tag"
+  type        = map(string)
 } 

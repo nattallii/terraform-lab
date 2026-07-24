@@ -9,5 +9,6 @@ variable "location" {
 }
 
 variable "tags" {
-  type = map(string)
+  description = "Creator tag value"
+  type        = map(string)
 }
