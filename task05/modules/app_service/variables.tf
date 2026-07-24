@@ -1,5 +1,5 @@
 variable "name" {
-  type        = string
+  type = string
 }
 
 variable "location" {
@@ -9,7 +9,7 @@ variable "location" {
 
 variable "tags" {
 
-    type = map(string)
+  type = map(string)
 
 }
 

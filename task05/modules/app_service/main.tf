@@ -6,12 +6,12 @@ resource "azurerm_windows_web_app" "as" {
 
   tags = var.tags
 
-  site_config {  #блок налаштувань App Service
-  
+  site_config { #блок налаштувань App Service
+
     ip_restriction_default_action = "Deny"
 
 
-    dynamic "ip_restriction" {   #автоматично створити один або кілька блоків ip_restriction
+    dynamic "ip_restriction" { #автоматично створити один або кілька блоків ip_restriction
       for_each = local.ip_rules
 
       content {
@@ -19,7 +19,7 @@ resource "azurerm_windows_web_app" "as" {
         priority = ip_restriction.value.priority
         action   = "Allow"
 
-        ip_address = try(ip_restriction.value.ip_address, null)
+        ip_address  = try(ip_restriction.value.ip_address, null)
         service_tag = try(ip_restriction.value.service_tag, null)
       }
     }
