@@ -58,6 +58,8 @@ module "asp2" {
   sku_name     = var.app_service_plans["asp2"].sku_name
   worker_count = var.app_service_plans["asp2"].worker_count
 
+
+
   resource_group_name = module.rg2.name
   location            = module.rg2.location
 
@@ -94,7 +96,7 @@ module "app2" {
   resource_group_name = module.rg2.name
   location            = module.rg2.location
 
-  service_plan_id = module.asp1.id
+  service_plan_id = module.asp2.id
 
   allowed_ip_address  = var.allowed_ip_address
   allow_ip_rule_name  = var.allow_ip_rule_name
