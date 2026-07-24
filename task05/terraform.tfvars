@@ -1,5 +1,3 @@
-# Resource Groups
-
 resource_groups = {
   rg1 = {
     name     = "cmaz-bo177l9g-mod5-rg-01"
@@ -16,8 +14,6 @@ resource_groups = {
 }
 
 
-# App Service Plans
-
 app_service_plans = {
   asp1 = {
     name         = "cmaz-bo177l9g-mod5-asp-01"
@@ -32,7 +28,6 @@ app_service_plans = {
   }
 }
 
-# App Services
 app_services = {
   app1 = {
     name = "cmaz-bo177l9g-mod5-app-01"
@@ -43,18 +38,15 @@ app_services = {
   }
 }
 
-# Access Restrictions
 allow_ip_rule_name  = "allow-ip"
 allow_tag_rule_name = "allow-tm"
 
-# Traffic Manager
 traffic_manager = {
   profile_name   = "cmaz-bo177l9g-mod5-traf"
   routing_method = "Performance"
 }
 
-# Tags
+
 creator_tag = "nataliia_shynhelska@epam.com"
 
-# Verification Agent
-allowed_ip_address = "18.153.146.156"
+allowed_ip_address = "18.153.146.156/32"
