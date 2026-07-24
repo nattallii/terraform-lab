@@ -1,7 +1,7 @@
 #resource group
 
 module "rg1" {
-  source = "./resource_group"
+  source = "./modules/resource_group"
 
   name     = var.resource_groups["rg1"].name
   location = var.resource_groups["rg1"].location
@@ -12,7 +12,7 @@ module "rg1" {
 }
 
 module "rg2" {
-  source = "./resource_group"
+  source = "./modules/resource_group"
 
   name     = var.resource_groups["rg2"].name
   location = var.resource_groups["rg2"].location
@@ -23,7 +23,7 @@ module "rg2" {
 }
 
 module "rg3" {
-  source = "./resource_group"
+  source = "./modules/resource_group"
 
   name     = var.resource_groups["rg3"].name
   location = var.resource_groups["rg3"].location
@@ -37,7 +37,7 @@ module "rg3" {
 
 
 module "asp1" {
-  source = "./app_service_plan"
+  source = "./modules/app_service_plan"
 
   name         = var.app_service_plans["asp1"].name
   sku_name     = var.app_service_plans["asp1"].sku_name
@@ -52,7 +52,7 @@ module "asp1" {
 }
 
 module "asp2" {
-  source = "./app_service_plan"
+  source = "./modules/app_service_plan"
 
   name         = var.app_service_plans["asp2"].name
   sku_name     = var.app_service_plans["asp2"].sku_name
@@ -69,7 +69,7 @@ module "asp2" {
 #app service
 
 module "app1" {
-  source = "./app_service"
+  source = "./modules/app_service"
 
   name                = var.app_services["app1"].name
   resource_group_name = module.rg1.name
@@ -88,7 +88,7 @@ module "app1" {
 }
 
 module "app2" {
-  source = "./app_service"
+  source = "./modules/app_service"
 
   name                = var.app_services["app2"].name
   resource_group_name = module.rg2.name
@@ -112,7 +112,7 @@ module "app2" {
 #traffic manager
 
 module "traffic_manager" {
-  source = "./traffic_manager"
+  source = "./modules/traffic_manager"
 
   traffic_manager_profile_name   = var.traffic_manager.profile_name
   traffic_manager_routing_method = var.traffic_manager.routing_method
