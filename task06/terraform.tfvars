@@ -1,6 +1,6 @@
 name_prefix = "cmaz-bo177l9g-mod6"
 
-location = "East US"
+location = " West Europe"
 
 creator_tag = "nataliia_shynhelska@epam.com"
 
