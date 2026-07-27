@@ -7,7 +7,7 @@ resource "azurerm_resource_group" "rg" {
 
 import {
   to = azurerm_resource_group.rg
-  id = var.rg_id
+  id = "/subscriptions/f78404e7-a1fd-4679-800e-e35faafe2a28/resourceGroups/cmtr-bo177l9g-mod7-rg"
 }
 
 resource "azurerm_storage_account" "sa" {
@@ -27,7 +27,7 @@ resource "azurerm_storage_account" "sa" {
 
 import {
   to = azurerm_storage_account.sa
-  id = var.sa_id
+  id = "/subscriptions/f78404e7-a1fd-4679-800e-e35faafe2a28/resourceGroups/cmtr-bo177l9g-mod7-rg/providers/Microsoft.Storage/storageAccounts/cmtrbo177l9gmod7sa"
 }
 
 
