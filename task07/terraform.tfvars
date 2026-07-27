@@ -4,6 +4,7 @@ rg_name = "cmtr-bo177l9g-mod7-rg"
 
 sa_name = "cmtrbo177l9gmod7sa"
 
+
 blob_file = "blob.txt"
 
 fd_profile_name = "cmtr-bo177l9g-mod7-fd-profile"

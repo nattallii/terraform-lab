@@ -16,6 +16,7 @@ variable "sa_name" {
 }
 
 
+
 variable "blob_file" {
   description = "Name of the file stored as a blob in the Storage Account."
   type        = string
