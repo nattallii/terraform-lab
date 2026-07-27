@@ -48,3 +48,10 @@ variable "sa_primary_blob_host" {
   description = "Primary Blob hostname of the Storage Account used as the Front Door origin."
   type        = string
 }
+
+
+variable "origin_path" {
+  description = "Path to the blob container in the Storage Account."
+  type        = string
+}
+

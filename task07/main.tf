@@ -45,6 +45,7 @@ module "cdn" {
   fd_origin_group_name = var.fd_origin_group_name
   fd_origin_name       = var.fd_origin_name
   fd_route_name        = var.fd_route_name
+  origin_path          = var.origin_path
 
   sa_primary_blob_host = azurerm_storage_account.sa.primary_blob_host
 }

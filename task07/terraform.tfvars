@@ -16,3 +16,5 @@ fd_origin_group_name = "cmtr-bo177l9g-mod7-fd-origin-group"
 fd_origin_name       = "cmtr-bo177l9g-mod7-fd-origin"
 
 fd_route_name = "default"
+
+origin_path = "/mycontainer"

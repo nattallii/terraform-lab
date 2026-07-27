@@ -38,6 +38,8 @@ resource "azurerm_cdn_frontdoor_origin" "fd_origin" {
   origin_host_header = var.sa_primary_blob_host
   priority           = 1
   weight             = 1
+
+
 }
 
 resource "azurerm_cdn_frontdoor_route" "fd_route" {
@@ -46,6 +48,12 @@ resource "azurerm_cdn_frontdoor_route" "fd_route" {
   cdn_frontdoor_origin_ids      = [azurerm_cdn_frontdoor_origin.fd_origin.id]
   cdn_frontdoor_endpoint_id     = azurerm_cdn_frontdoor_endpoint.fd_endpoint.id
 
-  patterns_to_match   = ["/*"]
-  supported_protocols = ["Http", "Https"]
+  patterns_to_match      = ["/*"]
+  supported_protocols    = ["Http", "Https"]
+  forwarding_protocol    = "HttpsOnly"
+  link_to_default_domain = true
+  https_redirect_enabled = true
+
+  cdn_frontdoor_origin_path = var.origin_path
+
 }

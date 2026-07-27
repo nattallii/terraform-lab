@@ -51,3 +51,8 @@ variable "fd_route_name" {
   description = "Name of the Azure Front Door route."
   type        = string
 }
+
+variable "origin_path" {
+  description = "Origin path to the blob container used by Azure Front Door."
+  type        = string
+}
