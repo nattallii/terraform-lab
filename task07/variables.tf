@@ -8,20 +8,13 @@ variable "rg_name" {
   type        = string
 }
 
-variable "rg_id" {
-  description = "Resource ID of the Azure Resource Group."
-  type        = string
-}
+
 
 variable "sa_name" {
   description = "Name of the Azure Storage Account."
   type        = string
 }
 
-variable "sa_id" {
-  description = "Resource ID of the Azure Storage Account."
-  type        = string
-}
 
 variable "blob_file" {
   description = "Name of the file stored as a blob in the Storage Account."

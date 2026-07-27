@@ -35,10 +35,8 @@ module "cdn" {
   source   = "./modules/cdn"
   location = var.location
 
-  sa_id   = azurerm_storage_account.sa.id
   sa_name = azurerm_storage_account.sa.name
 
-  rg_id   = azurerm_resource_group.rg.id
   rg_name = azurerm_resource_group.rg.name
 
   fd_profile_name      = var.fd_profile_name
@@ -49,5 +47,4 @@ module "cdn" {
   fd_route_name        = var.fd_route_name
 
   sa_primary_blob_host = azurerm_storage_account.sa.primary_blob_host
-  blob_file            = var.blob_file
 }
