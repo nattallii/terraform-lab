@@ -1,6 +1,8 @@
 resource "azurerm_resource_group" "rg" {
   name     = var.rg_name
   location = var.location
+
+  tags = local.tags
 }
 
 import {
@@ -18,6 +20,9 @@ resource "azurerm_storage_account" "sa" {
 
   allow_nested_items_to_be_public  = false
   cross_tenant_replication_enabled = false
+
+  tags = local.tags
+
 }
 
 import {
