@@ -9,6 +9,7 @@ resource "azurerm_kubernetes_cluster" "aks_cluster" {
     node_count   = var.node_count
     vm_size      = var.vm_size
     os_disk_type = var.os_disk_type
+    os_disk_size_gb = 30
   }
 
   identity {
