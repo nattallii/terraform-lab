@@ -22,3 +22,5 @@ aks_node_pool_size      = "Standard_D2ads_v6"
 aks_node_pool_disk_type = "Ephemeral"
 
 student_email = "nataliia_shynhelska@epam.com"
+
+context_path = "https://github.com/nattallii/terraform-lab.git"
