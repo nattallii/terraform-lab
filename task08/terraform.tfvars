@@ -23,4 +23,4 @@ aks_node_pool_disk_type = "Ephemeral"
 
 student_email = "nataliia_shynhelska@epam.com"
 
-context_path = "https://github.com/nattallii/terraform-lab.git"
+context_path = "https://github.com/nattallii/terraform-lab.git#main:task08/application"
