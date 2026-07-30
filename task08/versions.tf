@@ -15,10 +15,6 @@ terraform {
     kubernetes = {
       source = "hashicorp/kubernetes"
     }
-
-    random = {
-      source = "hashicorp/random"
-    }
   }
 }
 
@@ -31,8 +27,7 @@ provider "kubectl" {
   client_certificate     = base64decode(module.aks.client_certificate)
   client_key             = base64decode(module.aks.client_key)
   cluster_ca_certificate = base64decode(module.aks.cluster_ca_certificate)
-
-  load_config_file = false
+  load_config_file       = false
 }
 
 provider "kubernetes" {
