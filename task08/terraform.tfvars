@@ -1,6 +1,6 @@
 name_prefix = "cmtr-bo177l9g-mod8"
 
-location = "East US"
+location = "westeurope"
 
 redis_capacity   = 2
 redis_sku        = "Basic"
