@@ -46,11 +46,11 @@ module "aci_redis" {
 module "storage" {
   source = "./modules/storage"
 
-  name                = var.storage_container_name
+  name                = local.sa_name
   location            = azurerm_resource_group.rg.location
   resource_group_name = azurerm_resource_group.rg.name
 
-  container_name   = local.sa_name
+  container_name   = var.storage_container_name
   replication_type = var.storage_replication_type
   access_type      = var.container_access_type
 
