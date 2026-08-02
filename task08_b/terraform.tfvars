@@ -24,7 +24,7 @@ student_email = "nataliia_shynhelska@epam.com"
 aca_env_workload_profile_type = "Consumption"
 aca_workload_profile_type     = "Consumption"
 
-redis_image = "mcr.microsoft.com/oss/bitnami/redis:7.4.2"
+redis_image = "mcr.microsoft.com/cbl-mariner/base/redis:6.2"
 
 storage_container_name   = "app-content"
 storage_replication_type = "LRS"

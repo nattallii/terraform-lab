@@ -38,6 +38,8 @@ module "aci_redis" {
   redis_hostname_secret_name = var.redis_hostname_secret_name
   redis_password_secret_name = var.redis_password_secret_name
 
+  depends_on = [module.keyvault]
+
   tags = local.tags
 }
 
