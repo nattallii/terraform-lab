@@ -24,6 +24,11 @@ locals {
       protocol = "UDP"
     }
 
+    https = {
+      port     = "443"
+      protocol = "TCP"
+    }
+
   }
 
   nat_rules = {
@@ -38,13 +43,20 @@ locals {
 
     mcr = {
       fqdns = [
-        "mcr.microsoft.com"
+        "mcr.microsoft.com",
+        "*.data.mcr.microsoft.com"
       ]
     }
 
     management = {
       fqdns = [
         "management.azure.com"
+      ]
+    }
+
+    login = {
+      fqdns = [
+        "login.microsoftonline.com"
       ]
     }
 
