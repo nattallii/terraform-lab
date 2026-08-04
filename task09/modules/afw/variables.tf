@@ -30,7 +30,7 @@ variable "aks_subnet_name" {
 
 
 
-variable "aks_load_balancer_public_ip" {
+variable "aks_load_balancer_ip" {
   description = "AKS lb ip"
   type        = string
 }

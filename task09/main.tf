@@ -9,7 +9,7 @@ module "afw" {
   rg_name  = data.azurerm_resource_group.rg.name
 
   firewall_public_ip_name     = var.firewall_public_ip_name
-  aks_load_balancer_public_ip = var.aks_load_balancer_public_ip
+  aks_load_balancer_ip = var.aks_load_balancer_ip
 
   aks_subnet_name      = var.aks_subnet_name
   virtual_network_name = var.virtual_network_name
