@@ -60,6 +60,17 @@ locals {
       ]
     }
 
+    aks = {
+      fqdns = [
+        "*.hcp.eastus.azmk8s.io"
+      ]
+    }
+
+    packages = {
+      fqdns = [
+        "packages.microsoft.com"
+      ]
+    }
   }
 
 }
