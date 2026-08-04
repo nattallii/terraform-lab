@@ -150,7 +150,7 @@ resource "azurerm_firewall_nat_rule_collection" "fwnat" {
       destination_addresses = [
         azurerm_public_ip.public_ip.ip_address
       ]
-      translated_address = var.aks_load_balancer_ip
+      translated_address = var.aks_loadbalancer_ip
 
       translated_port = tonumber(rule.value.port)
 

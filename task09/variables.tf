@@ -34,8 +34,8 @@ variable "aks_cluster_name" {
   type        = string
 }
 
-variable "aks_load_balancer_ip" {
-  description = "Public IP address assigned to the AKS load balancer."
+variable "aks_loadbalancer_ip" {
+  description = "AKS load-balancer public IP"
   type        = string
 }
 
