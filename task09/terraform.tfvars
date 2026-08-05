@@ -2,14 +2,15 @@ location = "East US"
 
 rg_name = "cmtr-bo177l9g-mod9-rg"
 
-virtual_network_name          = "cmtr-bo177l9g-mod9-vnet"
+virtual_network_name = "cmtr-bo177l9g-mod9-vnet"
+
 virtual_network_address_space = "10.0.0.0/16"
 
 aks_subnet_name = "aks-snet"
 
 aks_cluster_name = "cmtr-bo177l9g-mod9-aks"
 
-aks_loadbalancer_ip = "74.151.136.190"
+aks_loadbalancer_ip = "20.231.240.191"
 
 firewall_public_ip_name = "cmtr-bo177l9g-mod9-pip"
 
