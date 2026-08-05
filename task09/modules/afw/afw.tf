@@ -62,6 +62,13 @@ resource "azurerm_route_table" "rt" {
 resource "azurerm_subnet_route_table_association" "aks" {
   subnet_id      = data.azurerm_subnet.aks_subnet.id
   route_table_id = azurerm_route_table.rt.id
+
+  depends_on = [
+    azurerm_firewall.fw,
+    azurerm_firewall_nat_rule_collection.fwnat,
+    azurerm_firewall_network_rule_collection.fwnrc,
+    azurerm_firewall_application_rule_collection.fwarc
+  ]
 }
 
 resource "azurerm_firewall_application_rule_collection" "fwarc" {
@@ -69,7 +76,7 @@ resource "azurerm_firewall_application_rule_collection" "fwarc" {
   azure_firewall_name = azurerm_firewall.fw.name
   resource_group_name = var.rg_name
 
-  priority = 100
+  priority = 300
   action   = "Allow"
 
   dynamic "rule" {
@@ -130,7 +137,7 @@ resource "azurerm_firewall_nat_rule_collection" "fwnat" {
   azure_firewall_name = azurerm_firewall.fw.name
   resource_group_name = var.rg_name
 
-  priority = 300
+  priority = 100
   action   = "Dnat"
 
   dynamic "rule" {
@@ -139,9 +146,7 @@ resource "azurerm_firewall_nat_rule_collection" "fwnat" {
     content {
       name = rule.key
 
-      source_addresses = [
-        "*"
-      ]
+      source_addresses = ["0.0.0.0/0"]
 
       destination_ports = [
         rule.value.port
