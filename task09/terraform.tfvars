@@ -10,7 +10,7 @@ aks_subnet_name = "aks-snet"
 
 aks_cluster_name = "cmtr-bo177l9g-mod9-aks"
 
-aks_loadbalancer_ip = "20.231.240.191"
+aks_loadbalancer_ip = "4.157.211.65"
 
 firewall_public_ip_name = "cmtr-bo177l9g-mod9-pip"
 
