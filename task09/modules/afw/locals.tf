@@ -29,6 +29,11 @@ locals {
       protocol = "TCP"
     }
 
+    http = {
+      port     = "80"
+      protocol = "TCP"
+    }
+
   }
 
   nat_rules = {
@@ -62,6 +67,7 @@ locals {
 
     aks = {
       fqdns = [
+        "*.azmk8s.io",
         "*.hcp.eastus.azmk8s.io"
       ]
     }
